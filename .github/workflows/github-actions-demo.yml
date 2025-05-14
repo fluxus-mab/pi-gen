@@ -17,5 +17,5 @@ jobs:
           ls ${{ github.workspace }}
       - name: attempt to build
         run: |
-            ./build.sh
+           sudo CLEAN=1 ./build.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."
