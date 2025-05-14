@@ -15,6 +15,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: installing dependancies
+        run: |
+          sudo apt update && sudo apt upgrade -y && sudo apt install quilt qemu-user-static debootstrap libarchive-tools arch-test -y
+      
       - name: attempt to build
         run: |
            sudo CLEAN=1 ./build.sh
