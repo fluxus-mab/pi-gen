@@ -1,0 +1,13 @@
+IMG_NAME="flux_os-bookworm-armhf"
+PI_GEN_RELEASE="FluxOS"
+
+#fluffy stuff that's probably not needed
+LOCALE_DEFAULT="en_US.UTF-8"
+KEYBOARD_KEYMAP="us"
+KEYBOARD_LAYOUT="English (US)"
+TIMEZONE_DEFAULT="America/Los_Angeles"
+
+#save time during dev, change when complete
+#DEPLOY_COMPRESSION=none
+DEPLOY_COMPRESSION=zip
+COMPRESSION_LEVEL=6
