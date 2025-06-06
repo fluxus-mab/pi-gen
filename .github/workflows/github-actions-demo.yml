@@ -31,13 +31,13 @@ jobs:
            sudo CLEAN=1 ./build.sh
 
       - name: export folder structure
-        run: tree
+        run: tree -L 2
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Raspbian_lite
-          path: /home/runner/work/pi-gen/pi-gen/deploy/*.img
+          path: /home/runner/work/pi-gen/pi-gen/deploy/image*.zip
           if-no-files-found: error
           retention-days: 7
       - run: echo "🍏 This job's status is ${{ job.status }}."
