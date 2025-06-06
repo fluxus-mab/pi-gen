@@ -17,7 +17,7 @@ jobs:
           ls ${{ github.workspace }}
       - name: installing dependancies
         run: |
-          sudo apt update && sudo apt upgrade -y && sudo apt install quilt qemu-user-static debootstrap libarchive-tools arch-test -y
+          sudo apt update && sudo apt install quilt qemu-user-static debootstrap libarchive-tools arch-test -y
       
       - name: attempt to build
         run: |
