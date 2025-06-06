@@ -30,7 +30,7 @@ jobs:
         run: |
            sudo CLEAN=1 ./build.sh
 
-      -name: export folder structure
+      - name: export folder structure
         run: tree
 
       - name: Upload a Build Artifact
