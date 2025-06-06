@@ -10,4 +10,4 @@ TIMEZONE_DEFAULT="America/Los_Angeles"
 #save time during dev, change when complete
 #DEPLOY_COMPRESSION=none
 DEPLOY_COMPRESSION=zip
-COMPRESSION_LEVEL=6
+COMPRESSION_LEVEL=8

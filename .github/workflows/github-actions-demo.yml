@@ -15,6 +15,13 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: RAM
+        run: |
+          free -h
+      - name: os
+        run : uname -a
+      - name: Storage
+        run : df -h
       - name: installing dependancies
         run: |
           sudo apt update && sudo apt install quilt qemu-user-static debootstrap libarchive-tools arch-test -y
@@ -22,4 +29,15 @@ jobs:
       - name: attempt to build
         run: |
            sudo CLEAN=1 ./build.sh
+
+      -name: export folder structure
+        run: tree
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Raspbian_lite
+          path: /home/runner/work/pi-gen/pi-gen/deploy/*.img
+          if-no-files-found: error
+          retention-days: 7
       - run: echo "🍏 This job's status is ${{ job.status }}."
